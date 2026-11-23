@@ -12,7 +12,12 @@
   --px-purple-hi: #b14bd0;
   --px-lime: #c5c8d2;
   --px-silver: radial-gradient(38% 60% at 80% 66%, rgba(255,255,255,0.5), transparent 72%), linear-gradient(115deg, #cfd1d8 0%, #e6e7eb 20%, #ffffff 32%, #e3e4e9 41%, #c8cad1 56%, #a8aab2 78%, #b6b8bf 100%);
-  --px-coral: #ff6f59;
+  /* Palette: blue, red, green and black from the brand sheet, each with a deep, a base and a light shade. */
+  --px-blue-d: #1c1f66; --px-blue: #2e3192; --px-blue-l: #dcdef5;
+  --px-red-d: #9c1219; --px-red: #d11a22; --px-red-l: #fbdcde;
+  --px-green-d: #00632c; --px-green: #008a3e; --px-green-l: #d2eedf;
+  --px-black: #3a0f47; --px-black-2: #4d1a5c;
+  --px-coral: #d11a22;
   --px-cream: #fff4e6;
   font-family: "Bricolage Grotesque Variable", "Anek Bangla", ui-sans-serif, system-ui, sans-serif;
   font-optical-sizing: auto;
@@ -57,5 +62,5 @@ html[lang="bn"] .px :where(h1, h2, h3, h4, .px-display) { letter-spacing: -0.01e
 /* Pop-out type: a solid extruded shadow in a second colour. Padding gives the letter mask room so it is not clipped. */
 .px .px-pop .px-word { padding: 0.06em 0.14em 0.18em 0.06em; margin: -0.06em -0.14em -0.18em -0.06em; }
 
-.px .px-pop-ink .px-char { text-shadow: 0.008em 0.009em 0 #d3a9e0, 0.016em 0.018em 0 #d3a9e0, 0.024em 0.026em 0 #d3a9e0, 0.032em 0.035em 0 #d3a9e0, 0.040em 0.044em 0 #d3a9e0, 0.048em 0.053em 0 #d3a9e0, 0.056em 0.062em 0 #d3a9e0, 0.064em 0.070em 0 #d3a9e0, 0.072em 0.079em 0 #d3a9e0, 0.080em 0.088em 0 #d3a9e0, 0.088em 0.097em 0 #d3a9e0, 0.096em 0.106em 0 #d3a9e0; }
-.px .px-pop-deep .px-char { text-shadow: 0.008em 0.009em 0 #b86bc0, 0.016em 0.018em 0 #b86bc0, 0.024em 0.026em 0 #b86bc0, 0.032em 0.035em 0 #b86bc0, 0.040em 0.044em 0 #b86bc0, 0.048em 0.053em 0 #b86bc0, 0.056em 0.062em 0 #b86bc0, 0.064em 0.070em 0 #b86bc0, 0.072em 0.079em 0 #b86bc0, 0.080em 0.088em 0 #b86bc0, 0.088em 0.097em 0 #b86bc0, 0.096em 0.106em 0 #b86bc0; }
+.px .px-pop-ink .px-char { text-shadow: 0.008em 0.009em 0 #d3a9e0, 0.016em 0.018em 0 #d3a9e0, 0.024em 0.026em 0 #d3a9e0, 0.032em 0.035em 0 #d3a9e0, 0.040em 0.044em 0 #d3a9e0, 0.048em 0.053em 0 #d3a9e0; }
+.px .px-pop-deep .px-char { text-shadow: 0.008em 0.009em 0 #b86bc0, 0.016em 0.018em 0 #b86bc0, 0.024em 0.026em 0 #b86bc0, 0.032em 0.035em 0 #b86bc0, 0.040em 0.044em 0 #b86bc0, 0.048em 0.053em 0 #b86bc0; }

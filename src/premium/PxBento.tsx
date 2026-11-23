@@ -72,7 +72,7 @@ export function PxBento() {
           </article>
 
           {/* Add money phone */}
-          <article className={`${tile} row-span-2 bg-[var(--px-coral)] p-6 text-[var(--px-ink)]`}>
+          <article className={`${tile} row-span-2 bg-[var(--px-blue)] p-6 text-white`}>
             <Clip id="add" />
             <div className="bt-in flex h-full flex-col">
               <h3 className="text-[clamp(1.6rem,2.4vw,2.2rem)] font-extrabold">{t({ en: 'Add money, your way.', bn: 'নিজের মতো অ্যাড মানি।' })}</h3>
@@ -81,10 +81,10 @@ export function PxBento() {
           </article>
 
           {/* Saving */}
-          <article className={`${tile} bg-[var(--px-cream)] p-6 text-[var(--px-ink)]`}>
+          <article className={`${tile} bg-[var(--px-green-l)] p-6 text-[var(--px-green-d)]`}>
             <Clip id="save" />
             <div className="bt-in flex h-full flex-col justify-between">
-              <PiggyBank size={52} strokeWidth={1.6} aria-hidden className="text-[var(--px-purple)]" />
+              <PiggyBank size={52} strokeWidth={1.6} aria-hidden className="text-[var(--px-green)]" />
               <h3 className="text-[clamp(1.6rem,2.4vw,2.2rem)] font-extrabold">{t({ en: 'Build a saving habit.', bn: 'সঞ্চয়ের অভ্যাস গড়ুন।' })}</h3>
             </div>
           </article>
@@ -97,17 +97,17 @@ export function PxBento() {
                 <h3 className="text-[clamp(1.8rem,3vw,2.8rem)] font-extrabold">{t({ en: 'Built for campus life.', bn: 'ক্যাম্পাস জীবনের জন্য।' })}</h3>
                 <p className="mt-2 max-w-[22rem] text-[0.98rem] font-medium text-[var(--px-ink)]/70">{t({ en: 'Pay education bills right from the app.', bn: 'অ্যাপ থেকেই শিক্ষা-সংক্রান্ত বিল দিন।' })}</p>
               </div>
-              <GraduationCap size={84} strokeWidth={1.3} aria-hidden className="shrink-0 text-[var(--px-purple)]" />
+              <GraduationCap size={84} strokeWidth={1.3} aria-hidden className="shrink-0 text-[var(--px-blue)]" />
             </div>
           </article>
 
           {/* Nearby */}
-          <article className={`${tile} col-span-2 bg-white p-7`}>
+          <article className={`${tile} col-span-2 bg-[var(--px-black)] p-7 text-white`}>
             <Clip id="near" />
             <div className="bt-in flex h-full flex-col justify-between">
-              <div className="flex items-center gap-3"><MapPin size={30} aria-hidden className="text-[var(--px-coral)]" /><h3 className="text-[clamp(1.8rem,3vw,2.8rem)] font-extrabold">{t({ en: 'Find it nearby.', bn: 'কাছেই খুঁজুন।' })}</h3></div>
+              <div className="flex items-center gap-3"><MapPin size={30} aria-hidden className="text-[#ff8a8f]" /><h3 className="text-[clamp(1.8rem,3vw,2.8rem)] font-extrabold">{t({ en: 'Find it nearby.', bn: 'কাছেই খুঁজুন।' })}</h3></div>
               <ul className="flex flex-wrap gap-2.5">
-                {nearby.map((n, i) => <li key={i} className="rounded-full border border-[var(--px-line)] px-4 py-2 text-[0.92rem] font-bold">{t(n)}</li>)}
+                {nearby.map((n, i) => <li key={i} className="rounded-full border border-white/25 px-4 py-2 text-[0.92rem] font-bold">{t(n)}</li>)}
               </ul>
             </div>
           </article>

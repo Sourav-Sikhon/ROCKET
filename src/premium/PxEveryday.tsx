@@ -8,19 +8,19 @@ type Scene = { n: string; word: L; bg: string; fg: string; chip: string; screen:
 
 // Everything here restates what the official pages and the Play listing say Rocket does.
 const scenes: Scene[] = [
-  { n: '01', word: { en: 'Bills', bn: 'বিল' }, bg: '#89288f', fg: '#ffffff', chip: 'var(--px-silver)', screen: 'home', title: { en: 'Bills, sorted.', bn: 'বিল, মেটানো।' },
+  { n: '01', word: { en: 'Bills', bn: 'বিল' }, bg: 'var(--px-purple)', fg: '#ffffff', chip: 'var(--px-silver)', screen: 'home', title: { en: 'Bills, sorted.', bn: 'বিল, মেটানো।' },
     line: { en: 'Electricity, gas, water, internet and more, paid from one place.', bn: 'বিদ্যুৎ, গ্যাস, পানি, ইন্টারনেটসহ আরও অনেক বিল, এক জায়গা থেকে।' },
     tags: [{ en: 'Electricity', bn: 'বিদ্যুৎ' }, { en: 'Gas', bn: 'গ্যাস' }, { en: 'Water', bn: 'পানি' }, { en: 'Internet', bn: 'ইন্টারনেট' }] },
   { n: '02', word: { en: 'Campus', bn: 'ক্যাম্পাস' }, bg: 'var(--px-silver)', fg: '#1d0a33', chip: '#89288f', screen: 'add-money', title: { en: 'Campus, covered.', bn: 'ক্যাম্পাস, নিশ্চিন্ত।' },
     line: { en: 'Education is a Bill Pay category, so fees are a few taps away, wherever class takes you.', bn: 'বিল পে-তে শিক্ষা একটি ক্যাটাগরি, তাই ফি দেওয়া মাত্র কয়েকটি ট্যাপ।' },
     tags: [{ en: 'Education', bn: 'শিক্ষা' }, { en: 'Add money', bn: 'অ্যাড মানি' }] },
-  { n: '03', word: { en: 'Life', bn: 'জীবন' }, bg: '#ff6f59', fg: '#1d0a33', chip: '#ffffff', screen: 'store-locator', title: { en: 'Life, on tap.', bn: 'জীবন, হাতের মুঠোয়।' },
+  { n: '03', word: { en: 'Life', bn: 'জীবন' }, bg: 'var(--px-red)', fg: '#ffffff', chip: '#ffffff', screen: 'store-locator', title: { en: 'Life, on tap.', bn: 'জীবন, হাতের মুঠোয়।' },
     line: { en: 'Top up your phone, pay at shops with a scan, and find the nearest ATM or agent.', bn: 'ফোনে টপ-আপ, স্ক্যান করে দোকানে পেমেন্ট, আর কাছের এটিএম বা এজেন্ট খুঁজে নিন।' },
     tags: [{ en: 'Top-up', bn: 'টপ-আপ' }, { en: 'Merchant pay', bn: 'মার্চেন্ট পে' }, { en: 'ATM', bn: 'এটিএম' }] },
-  { n: '04', word: { en: 'Money', bn: 'টাকা' }, bg: '#2f7de1', fg: '#ffffff', chip: '#ffffff', screen: 'cash-out', title: { en: 'Money, in view.', bn: 'টাকা, নজরে।' },
+  { n: '04', word: { en: 'Money', bn: 'টাকা' }, bg: 'var(--px-blue)', fg: '#ffffff', chip: '#ffffff', screen: 'cash-out', title: { en: 'Money, in view.', bn: 'টাকা, নজরে।' },
     line: { en: 'Check your balance and statement any time, and build a habit of saving.', bn: 'যেকোনো সময় ব্যালেন্স ও স্টেটমেন্ট দেখুন, গড়ে তুলুন সঞ্চয়ের অভ্যাস।' },
     tags: [{ en: 'Balance', bn: 'ব্যালেন্স' }, { en: 'Statement', bn: 'স্টেটমেন্ট' }] },
-  { n: '05', word: { en: 'Scan', bn: 'স্ক্যান' }, bg: '#ffb020', fg: '#1d0a33', chip: '#ffffff', screen: 'my-qr', title: { en: 'Scan. Pay. Done.', bn: 'স্ক্যান। পে। শেষ।' },
+  { n: '05', word: { en: 'Scan', bn: 'স্ক্যান' }, bg: 'var(--px-green)', fg: '#ffffff', chip: '#ffffff', screen: 'my-qr', title: { en: 'Scan. Pay. Done.', bn: 'স্ক্যান। পে। শেষ।' },
     line: { en: 'Pay with a QR or show your own My Rocket QR, and send money to any Rocket number.', bn: 'QR দিয়ে পেমেন্ট করুন বা আপনার মাই রকেট QR দেখান, আর যেকোনো রকেট নম্বরে টাকা পাঠান।' },
     tags: [{ en: 'Scan QR', bn: 'QR স্ক্যান' }, { en: 'My Rocket QR', bn: 'মাই রকেট QR' }, { en: 'Send money', bn: 'সেন্ড মানি' }] },
 ]
