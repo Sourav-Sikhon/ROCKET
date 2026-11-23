@@ -63,7 +63,7 @@ export function PxBento() {
           </article>
 
           {/* Scan */}
-          <article className={`${tile} bg-[image:var(--px-silver)] p-6 text-[var(--px-ink)]`}>
+          <article className={`${tile} bg-[var(--px-red)] p-6 text-white`}>
             <Clip id="scan" />
             <div className="bt-in flex h-full flex-col justify-between">
               <QrCode size={52} strokeWidth={1.6} aria-hidden />

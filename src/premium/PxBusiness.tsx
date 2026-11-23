@@ -9,10 +9,10 @@ import type { IconName, L } from '../data/services'
 
 // Business needs the official pages cover: merchant pay, salary and allowance disbursement, Bill Pay categories, remittance.
 const kinds: { to: string; icon: IconName; name: L; line: L; bg: string; fg: string; chip: string }[] = [
-  { to: '/services/merchant-payment', icon: 'shop', name: { en: 'Merchants', bn: 'মার্চেন্ট' }, line: { en: 'Accept payment from customers at your counter.', bn: 'কাউন্টারে গ্রাহকের পেমেন্ট গ্রহণ করুন।' }, bg: '#89288f', fg: '#ffffff', chip: '#ffffff' },
-  { to: '/services/salary-disbursement', icon: 'salary', name: { en: 'Corporate & Government', bn: 'কর্পোরেট ও সরকারি' }, line: { en: 'Pay salaries and allowances straight into Rocket.', bn: 'বেতন ও ভাতা সরাসরি রকেটে পাঠান।' }, bg: '#ffffff', fg: '#1d0a33', chip: '#89288f' },
-  { to: '/services/bill-payment', icon: 'bill', name: { en: 'Educational Institutions', bn: 'শিক্ষা প্রতিষ্ঠান' }, line: { en: 'Education is a Bill Pay category in the app.', bn: 'অ্যাপের বিল পে-তে শিক্ষা একটি ক্যাটাগরি।' }, bg: '#ffffff', fg: '#1d0a33', chip: '#89288f' },
-  { to: '/services/foreign-remittance', icon: 'globe', name: { en: 'Remittance Partners', bn: 'রেমিট্যান্স পার্টনার' }, line: { en: 'Money from abroad, credited via nominated exchange houses.', bn: 'মনোনীত এক্সচেঞ্জ হাউজের মাধ্যমে বিদেশ থেকে টাকা।' }, bg: 'var(--px-black)', fg: '#1d0a33', chip: '#89288f' },
+  { to: '/services/merchant-payment', icon: 'shop', name: { en: 'Merchants', bn: 'মার্চেন্ট' }, line: { en: 'Accept payment from customers at your counter.', bn: 'কাউন্টারে গ্রাহকের পেমেন্ট গ্রহণ করুন।' }, bg: 'var(--px-green)', fg: '#ffffff', chip: '#ffffff' },
+  { to: '/services/salary-disbursement', icon: 'salary', name: { en: 'Corporate & Government', bn: 'কর্পোরেট ও সরকারি' }, line: { en: 'Pay salaries and allowances straight into Rocket.', bn: 'বেতন ও ভাতা সরাসরি রকেটে পাঠান।' }, bg: 'var(--px-blue-l)', fg: 'var(--px-blue-d)', chip: 'var(--px-blue)' },
+  { to: '/services/bill-payment', icon: 'bill', name: { en: 'Educational Institutions', bn: 'শিক্ষা প্রতিষ্ঠান' }, line: { en: 'Education is a Bill Pay category in the app.', bn: 'অ্যাপের বিল পে-তে শিক্ষা একটি ক্যাটাগরি।' }, bg: '#e9d8f2', fg: '#3a0f47', chip: 'var(--px-purple)' },
+  { to: '/services/foreign-remittance', icon: 'globe', name: { en: 'Remittance Partners', bn: 'রেমিট্যান্স পার্টনার' }, line: { en: 'Money from abroad, credited via nominated exchange houses.', bn: 'মনোনীত এক্সচেঞ্জ হাউজের মাধ্যমে বিদেশ থেকে টাকা।' }, bg: 'var(--px-blue)', fg: '#ffffff', chip: '#ffffff' },
 ]
 
 /** Rocket for Business, in the premium language: giant faded word, bold coloured cards, offset photo. */
@@ -51,7 +51,7 @@ export function PxBusiness() {
             {kinds.map((k) => (
               <li key={k.to} className="bz-card">
                 <Link to={k.to} className="group relative flex h-full min-h-[250px] flex-col overflow-hidden rounded-[28px] p-6 transition-transform duration-300 hover:-translate-y-1.5" style={{ background: k.bg, color: k.fg }}>
-                  <span className="relative grid h-16 w-16 place-items-center rounded-2xl" style={{ background: k.chip, color: k.chip === '#ffffff' ? '#1d0a33' : '#fff' }}><Icon name={k.icon} size={30} /></span>
+                  <span className="relative grid h-16 w-16 place-items-center rounded-2xl" style={{ background: k.chip, color: k.chip === '#ffffff' ? k.bg : '#fff' }}><Icon name={k.icon} size={30} /></span>
                   <span className="relative mt-auto block pt-8">
                     <span className="px-display block text-[1.55rem] font-extrabold leading-[1.1] tracking-[-0.02em]">{t(k.name)}</span>
                     <span className="mt-2 block text-[0.98rem] font-medium leading-[1.5] opacity-85">{t(k.line)}</span>

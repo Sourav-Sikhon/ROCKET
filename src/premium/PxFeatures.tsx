@@ -5,15 +5,54 @@ import { Phone } from '../components/Phone'
 import { useI18n } from '../i18n'
 import type { AppScreen, L } from '../data/services'
 
-/** A plain feature phone with the USSD prompt on screen, for "works on any phone". */
+/** A classic keypad handset showing the USSD prompt, for "works on any phone". */
 function FeaturePhone() {
+  const keys = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '*', '0', '#']
   return (
-    <svg aria-hidden viewBox="0 0 120 200" className="mx-auto h-[190px] w-auto">
-      <rect x="22" y="6" width="76" height="188" rx="16" fill="#1d0a33" />
-      <rect x="32" y="20" width="56" height="60" rx="6" fill="#e6e7eb" />
-      <text x="60" y="48" textAnchor="middle" fontSize="15" fontWeight="800" fill="#89288f" fontFamily="Bricolage Grotesque Variable, sans-serif">*322#</text>
-      <text x="60" y="68" textAnchor="middle" fontSize="8" fontWeight="700" fill="#1d0a33" fontFamily="Bricolage Grotesque Variable, sans-serif">Rocket</text>
-      {[0, 1, 2].flatMap((r) => [0, 1, 2].map((c) => <rect key={`${r}${c}`} x={34 + c * 19} y={94 + r * 21} width="15" height="14" rx="5" fill="#5a2b6b" />)).concat([<rect key="z" x="53" y="157" width="15" height="14" rx="5" fill="#5a2b6b" />])}
+    <svg aria-hidden viewBox="0 0 120 214" className="mx-auto h-[196px] w-auto drop-shadow-[0_14px_14px_rgba(0,70,30,0.28)]">
+      <defs>
+        <linearGradient id="fp-body" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="#3a4a44" /><stop offset="0.5" stopColor="#1f2925" /><stop offset="1" stopColor="#101614" />
+        </linearGradient>
+        <linearGradient id="fp-screen" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#d7ecd0" /><stop offset="1" stopColor="#b5d6ad" />
+        </linearGradient>
+        <linearGradient id="fp-key" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor="#4a5852" /><stop offset="1" stopColor="#2a3430" />
+        </linearGradient>
+      </defs>
+      {/* Body and bezel */}
+      <rect x="16" y="4" width="88" height="206" rx="20" fill="url(#fp-body)" />
+      <rect x="18.5" y="6.5" width="83" height="201" rx="17.5" fill="none" stroke="#ffffff" strokeOpacity="0.16" />
+      {/* Earpiece */}
+      <rect x="48" y="12" width="24" height="3.4" rx="1.7" fill="#0a0f0d" />
+      {/* Screen */}
+      <rect x="25" y="22" width="70" height="62" rx="6" fill="#0a0f0d" />
+      <rect x="28" y="25" width="64" height="56" rx="3.5" fill="url(#fp-screen)" />
+      <text x="34" y="37" fontSize="6" fontWeight="700" fill="#2b4a2b" fontFamily="Bricolage Grotesque Variable, sans-serif">Rocket</text>
+      <text x="60" y="57" textAnchor="middle" fontSize="15" fontWeight="800" fill="#1f3a22" fontFamily="Bricolage Grotesque Variable, sans-serif">*322#</text>
+      <text x="60" y="70" textAnchor="middle" fontSize="5.5" fontWeight="600" fill="#2b4a2b" fontFamily="Bricolage Grotesque Variable, sans-serif">Dutch-Bangla Bank</text>
+      <rect x="28" y="73" width="64" height="8" fill="#2b4a2b" opacity="0.14" />
+      <text x="32" y="79" fontSize="5" fontWeight="700" fill="#1f3a22" fontFamily="Bricolage Grotesque Variable, sans-serif">Options</text>
+      <text x="88" y="79" textAnchor="end" fontSize="5" fontWeight="700" fill="#1f3a22" fontFamily="Bricolage Grotesque Variable, sans-serif">Back</text>
+      {/* Navigation: soft keys and a round d-pad */}
+      <rect x="25" y="90" width="22" height="9" rx="4.5" fill="url(#fp-key)" />
+      <rect x="73" y="90" width="22" height="9" rx="4.5" fill="url(#fp-key)" />
+      <circle cx="60" cy="97" r="11" fill="#0d1311" />
+      <circle cx="60" cy="97" r="8.4" fill="url(#fp-key)" />
+      <circle cx="60" cy="97" r="3.4" fill="#0d1311" stroke="#ffffff" strokeOpacity="0.18" />
+      {/* Keypad */}
+      {keys.map((k, i) => {
+        const x = 26 + (i % 3) * 23
+        const y = 116 + Math.floor(i / 3) * 21
+        return (
+          <g key={k}>
+            <rect x={x} y={y} width="20" height="17" rx="6" fill="url(#fp-key)" />
+            <rect x={x + 0.5} y={y + 0.5} width="19" height="16" rx="5.5" fill="none" stroke="#ffffff" strokeOpacity="0.12" />
+            <text x={x + 10} y={y + 12} textAnchor="middle" fontSize="9" fontWeight="700" fill="#e8efe9" fontFamily="Bricolage Grotesque Variable, sans-serif">{k}</text>
+          </g>
+        )
+      })}
     </svg>
   )
 }
@@ -38,7 +77,7 @@ const features: { tint: string; fg: string; pane: string; t: L; d: L; media: Rea
   { tint: 'var(--px-silver)', fg: '#1d0a33', pane: 'rgba(255,255,255,0.5)', t: { en: 'Secure transfers', bn: 'নিরাপদ লেনদেন' }, d: { en: 'Needs your phone, PIN and check digit together.', bn: 'ফোন, পিন ও চেক ডিজিট একসাথে লাগে।' }, media: <Screen screen="login" /> },
   { tint: 'var(--px-blue-l)', fg: 'var(--px-blue-d)', pane: 'rgba(255,255,255,0.7)', t: { en: 'Agents nationwide', bn: 'সারা দেশে এজেন্ট' }, d: { en: 'Even in remote areas, with DBBL ATMs and branches behind them.', bn: 'দুর্গম এলাকাতেও, পেছনে আছে ডিবিবিএল এটিএম ও শাখা।' }, media: <Screen screen="store-locator" /> },
   { tint: 'var(--px-green)', fg: '#ffffff', pane: 'rgba(255,255,255,0.16)', t: { en: 'A habit of saving', bn: 'সঞ্চয়ের অভ্যাস' }, d: { en: 'A real bank account that helps you build one.', bn: 'আসল ব্যাংক অ্যাকাউন্ট, যা অভ্যাস গড়তে সাহায্য করে।' }, media: <Screen screen="add-money" /> },
-  { tint: 'var(--px-black)', fg: '#1d0a33', pane: 'rgba(255,255,255,0.5)', t: { en: 'Works on any phone', bn: 'যেকোনো ফোনে চলে' }, d: { en: 'No smartphone? Dial *322# on any handset.', bn: 'স্মার্টফোন নেই? যেকোনো ফোনে *322# ডায়াল করুন।' }, media: <FeaturePhone /> },
+  { tint: 'var(--px-green-l)', fg: 'var(--px-green-d)', pane: 'rgba(255,255,255,0.6)', t: { en: 'Works on any phone', bn: 'যেকোনো ফোনে চলে' }, d: { en: 'No smartphone? Dial *322# on any handset.', bn: 'স্মার্টফোন নেই? যেকোনো ফোনে *322# ডায়াল করুন।' }, media: <FeaturePhone /> },
   { tint: 'var(--px-red)', fg: '#ffffff', pane: 'rgba(255,255,255,0.16)', t: { en: 'Bangla and English', bn: 'বাংলা ও ইংরেজি' }, d: { en: 'The whole app speaks your language.', bn: 'পুরো অ্যাপ আপনার ভাষায়।' }, media: <Languages /> },
 ]
 
