@@ -9,6 +9,7 @@ import type { AppScreen, L } from '../data/services'
 // Drop a hosted file here (for example '/media/send-money.mp4') and that tutorial plays the real video instead of the walkthrough.
 const VIDEOS: Record<string, string> = {}
 const MS = 3800
+const GRAY = '#e4e3e8' // the neutral stage behind every tutorial thumbnail and player
 
 type Tutorial = { id: string; screen: AppScreen; c: [string, string, string]; title: L; detail: L; steps: L[]; to: string }
 
@@ -39,9 +40,7 @@ const tutorials: Tutorial[] = [
   }),
 ]
 
-const dark = (c: string) => c === '#ffffff' || c === '#d8ff3e'
-
-/** The player: a coloured stage whose phone screen and caption follow the steps, plus the step list. */
+/** The player: a gray stage whose phone screen and caption follow the steps, plus the step list. */
 function Player({ tut, onClose }: { tut: Tutorial; onClose: () => void }) {
   const { t } = useI18n()
   const [on, setOn] = useState(0)
@@ -61,7 +60,7 @@ function Player({ tut, onClose }: { tut: Tutorial; onClose: () => void }) {
     return () => window.clearTimeout(id)
   }, [on, playing, video, tut.steps.length])
 
-  const [bg, fg] = tut.c
+  const [bg, fg] = [GRAY, '#1d0a33']
   return (
     <div className="fixed inset-0 z-[80] grid place-items-center p-3 md:p-8" role="dialog" aria-modal="true" aria-label={t(tut.title)}>
       <div className="absolute inset-0 bg-[#2a0a30]/70 backdrop-blur-sm" onClick={onClose} />
@@ -97,7 +96,7 @@ function Player({ tut, onClose }: { tut: Tutorial; onClose: () => void }) {
             <h3 className="text-[clamp(1.5rem,2.6vw,2.2rem)] font-extrabold text-[var(--px-ink)]">{t(tut.title)}</h3>
             <p className="mt-1.5 max-w-[40rem] text-[1rem] font-medium leading-[1.5] text-[var(--px-ink)]/70">{t(tut.detail)}</p>
           </div>
-          <Link to={tut.to} onClick={onClose} className="group inline-flex min-h-[48px] items-center gap-2 rounded-full px-6 text-[0.98rem] font-bold" style={{ background: bg, color: dark(bg) || bg === '#ffffff' ? '#1d0a33' : '#fff' }}>
+          <Link to={tut.to} onClick={onClose} className="group inline-flex min-h-[48px] items-center gap-2 rounded-full px-6 text-[0.98rem] font-bold" style={{ background: '#89288f', color: '#fff' }}>
             {t({ en: 'Read the full guide', bn: 'পূর্ণ গাইড পড়ুন' })}<ArrowRight size={18} aria-hidden className="transition-transform duration-300 group-hover:translate-x-1" />
           </Link>
         </div>
@@ -130,7 +129,7 @@ export function PxGuide() {
 
         <ul className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
           {tutorials.map((x, i) => {
-            const [bg, fg, chip] = x.c
+            const [bg, fg] = [GRAY, '#1d0a33']
             return (
               <li key={x.id}>
                 <button type="button" onClick={() => setOpen(x)} className="group flex h-full w-full flex-col overflow-hidden rounded-[22px] bg-white text-left text-[var(--px-ink)] shadow-[0_24px_40px_-28px_rgba(29,10,51,0.7)] transition-[transform,box-shadow] duration-500 ease-[var(--ease-out-expo)] hover:-translate-y-2 hover:shadow-[0_34px_50px_-26px_rgba(29,10,51,0.8)]">
@@ -142,7 +141,6 @@ export function PxGuide() {
                     <span className="absolute left-4 top-1/2 grid h-14 w-14 -translate-y-1/2 place-items-center rounded-full bg-white text-[var(--px-purple)] shadow-[0_14px_26px_-10px_rgba(29,10,51,0.6)] transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:scale-110">
                       <Play size={22} aria-hidden fill="currentColor" className="translate-x-px" />
                     </span>
-                    <span aria-hidden className="absolute right-3 top-3 rounded-full px-3 py-1 text-[0.72rem] font-bold" style={{ background: chip, color: dark(chip) || chip === '#ffffff' ? '#1d0a33' : '#fff' }}>{t({ en: 'Tutorial', bn: 'টিউটোরিয়াল' })} {i + 1}</span>
                   </span>
                   {/* Title and short details */}
                   <span className="flex flex-1 flex-col p-5">
