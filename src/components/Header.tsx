@@ -46,7 +46,7 @@ export function Header() {
     <header className="pointer-events-none sticky top-0 z-50 box-border h-[var(--header-h)] pt-4">
       <a href="#main" className="pointer-events-auto sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-3 focus:z-[60] focus:bg-white focus:px-4 focus:py-2">{t(ui.skip)}</a>
       {/* A floating, centred, fully rounded bar: the page keeps its top spacing, the bar hovers in it */}
-      <div className={`pointer-events-auto mx-auto flex h-[68px] w-[calc(100%-1.5rem)] max-w-[1240px] items-center gap-6 rounded-full border border-white/70 pl-6 pr-3 transition-[background-color,box-shadow] duration-300 ${scrolled ? 'bg-white/90 shadow-[0_18px_40px_-22px_rgba(74,17,80,0.5)] backdrop-blur-md' : 'bg-white/75 shadow-[0_12px_30px_-22px_rgba(74,17,80,0.45)] backdrop-blur-md'}`}>
+      <div className={`pointer-events-auto mx-auto flex h-[68px] w-[calc(100%-1.5rem)] max-w-[1240px] items-center gap-6 rounded-full border border-white/70 pl-6 pr-3 transition-[background-color,box-shadow] duration-300 ${scrolled ? 'bg-white/95 shadow-[0_18px_40px_-22px_rgba(74,17,80,0.5)]' : 'bg-white/85 shadow-[0_12px_30px_-22px_rgba(74,17,80,0.45)]'}`}>
         <Link to="/" aria-label="Rocket home" className="shrink-0"><Logo className="h-[46px] w-auto" /></Link>
 
         <nav aria-label="Main" className="hidden flex-1 items-center justify-center gap-8 xl:flex">

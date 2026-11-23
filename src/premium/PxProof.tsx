@@ -57,7 +57,7 @@ export function PxProof() {
           <BadgePercent aria-hidden strokeWidth={1} className="pb-icon pointer-events-none absolute -right-[4%] top-1/2 h-[min(96vh,900px)] w-[min(96vh,900px)] -translate-y-1/2 text-white opacity-[0.12]" />
           <p className="pb-w absolute inset-0 flex flex-col justify-center px-[6vw]">
             <span className="block self-start text-[clamp(2.4rem,6.4vw,7rem)]"><Split as="span" className={word} text={{ en: "Country's", bn: 'দেশের' }} /></span>
-            <span className="pb-big block self-center text-[clamp(6rem,21vw,23rem)] text-[var(--px-lime)]"><Split as="span" className={word} text={{ en: 'lowest', bn: 'সবচেয়ে কম' }} /></span>
+            <span className="pb-big block self-center text-[clamp(6rem,21vw,23rem)] text-white"><Split as="span" className={word} text={{ en: 'lowest', bn: 'সবচেয়ে কম' }} /></span>
             <span className="block self-end text-[clamp(2.2rem,8vw,8.6rem)]"><Split as="span" className={word} text={{ en: 'cash-out charge', bn: 'ক্যাশ আউট চার্জ' }} /></span>
           </p>
         </div>
@@ -68,7 +68,7 @@ export function PxProof() {
         <p className="px-display wrap py-16 text-[clamp(3.4rem,17vw,6rem)] font-extrabold uppercase leading-[0.9] tracking-[-0.045em] text-[var(--px-purple)]">{t({ en: 'Most secure', bn: 'সবচেয়ে নিরাপদ' })}</p>
         <p className="px-display bg-[var(--px-purple)] py-16 text-white">
           <span className="wrap block text-[clamp(1.6rem,7vw,2.6rem)] font-extrabold uppercase">{t({ en: "Country's", bn: 'দেশের' })}</span>
-          <span className="wrap block text-[clamp(4rem,22vw,8rem)] font-extrabold uppercase leading-[0.9] text-[var(--px-lime)]">{t({ en: 'lowest', bn: 'সবচেয়ে কম' })}</span>
+          <span className="wrap block text-[clamp(4rem,22vw,8rem)] font-extrabold uppercase leading-[0.9] text-white">{t({ en: 'lowest', bn: 'সবচেয়ে কম' })}</span>
           <span className="wrap block text-[clamp(1.8rem,9vw,3.4rem)] font-extrabold uppercase leading-[1]">{t({ en: 'cash-out charge', bn: 'ক্যাশ আউট চার্জ' })}</span>
         </p>
       </div>
