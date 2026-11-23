@@ -8,7 +8,7 @@ import { PxTvc } from '../premium/PxTvc'
 import { PxEveryday } from '../premium/PxEveryday'
 import { PxBento } from '../premium/PxBento'
 import { PxStack } from '../premium/PxStack'
-import { Business } from '../sections/Business'
+import { PxBusiness } from '../premium/PxBusiness'
 import { PxGuide } from '../premium/PxGuide'
 import { PxFaq } from '../premium/PxFaq'
 import { PxCityCta } from '../premium/PxCityCta'
@@ -16,7 +16,7 @@ import { useTitle } from './useTitle'
 
 /**
  * Premium redesign, served at /premium so the current home page stays as it is.
- * Light by design: soft lilac and white, Rocket purple for action, lime and coral as small accents.
+ * Light by design: soft lilac and white, Rocket purple for action, silver and coral as small accents.
  * Each section moves differently: letter rise, a two-statement type scene, card rise, growing film frame,
  * a horizontal colour track, clip-path wipes, a stacked deck of services, a live walkthrough, an accordion and a flying mark.
  */
@@ -51,7 +51,7 @@ export default function Premium() {
       <PxEveryday />
       <PxBento />
       <PxStack />
-      <Business />
+      <PxBusiness />
       <PxGuide />
       <PxFaq />
       <PxCityCta />

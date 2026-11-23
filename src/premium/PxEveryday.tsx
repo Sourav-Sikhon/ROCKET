@@ -8,10 +8,10 @@ type Scene = { n: string; word: L; bg: string; fg: string; chip: string; screen:
 
 // Everything here restates what the official pages and the Play listing say Rocket does.
 const scenes: Scene[] = [
-  { n: '01', word: { en: 'Bills', bn: 'বিল' }, bg: '#89288f', fg: '#ffffff', chip: '#d8ff3e', screen: 'home', title: { en: 'Bills, sorted.', bn: 'বিল, মেটানো।' },
+  { n: '01', word: { en: 'Bills', bn: 'বিল' }, bg: '#89288f', fg: '#ffffff', chip: '#c5c8d2', screen: 'home', title: { en: 'Bills, sorted.', bn: 'বিল, মেটানো।' },
     line: { en: 'Electricity, gas, water, internet and more, paid from one place.', bn: 'বিদ্যুৎ, গ্যাস, পানি, ইন্টারনেটসহ আরও অনেক বিল, এক জায়গা থেকে।' },
     tags: [{ en: 'Electricity', bn: 'বিদ্যুৎ' }, { en: 'Gas', bn: 'গ্যাস' }, { en: 'Water', bn: 'পানি' }, { en: 'Internet', bn: 'ইন্টারনেট' }] },
-  { n: '02', word: { en: 'Campus', bn: 'ক্যাম্পাস' }, bg: '#d8ff3e', fg: '#1d0a33', chip: '#89288f', screen: 'add-money', title: { en: 'Campus, covered.', bn: 'ক্যাম্পাস, নিশ্চিন্ত।' },
+  { n: '02', word: { en: 'Campus', bn: 'ক্যাম্পাস' }, bg: '#c5c8d2', fg: '#1d0a33', chip: '#89288f', screen: 'add-money', title: { en: 'Campus, covered.', bn: 'ক্যাম্পাস, নিশ্চিন্ত।' },
     line: { en: 'Education is a Bill Pay category, so fees are a few taps away, wherever class takes you.', bn: 'বিল পে-তে শিক্ষা একটি ক্যাটাগরি, তাই ফি দেওয়া মাত্র কয়েকটি ট্যাপ।' },
     tags: [{ en: 'Education', bn: 'শিক্ষা' }, { en: 'Add money', bn: 'অ্যাড মানি' }] },
   { n: '03', word: { en: 'Life', bn: 'জীবন' }, bg: '#ff6f59', fg: '#1d0a33', chip: '#ffffff', screen: 'store-locator', title: { en: 'Life, on tap.', bn: 'জীবন, হাতের মুঠোয়।' },
@@ -97,7 +97,7 @@ export function PxEveryday() {
               <h3 className="text-[clamp(3rem,6.4vw,6rem)] font-extrabold leading-[0.98]">{t(s.title)}</h3>
               <p className="mt-6 max-w-[28rem] text-[clamp(1.05rem,1.4vw,1.3rem)] font-medium leading-[1.5]" style={{ opacity: 0.9 }}>{t(s.line)}</p>
               <ul className="mt-8 flex flex-wrap gap-2.5">
-                {s.tags.map((g, i) => <li key={i} className="rounded-full px-5 py-2.5 text-[0.95rem] font-bold" style={{ background: s.chip, color: s.chip === '#ffffff' || s.chip === '#d8ff3e' ? '#1d0a33' : '#fff' }}>{t(g)}</li>)}
+                {s.tags.map((g, i) => <li key={i} className="rounded-full px-5 py-2.5 text-[0.95rem] font-bold" style={{ background: s.chip, color: s.chip === '#ffffff' || s.chip === '#c5c8d2' ? '#1d0a33' : '#fff' }}>{t(g)}</li>)}
               </ul>
             </div>
             <div aria-hidden className="lf-phone absolute bottom-[-14%] right-[10%] w-[min(25vw,330px)] drop-shadow-[0_40px_50px_rgba(29,10,51,0.3)]"><Phone screen={s.screen} className="w-full" /></div>

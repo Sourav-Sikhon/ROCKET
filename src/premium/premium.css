@@ -1,7 +1,7 @@
 @import "@fontsource-variable/bricolage-grotesque/index.css";
 
 /* Premium redesign scope. Everything below only applies inside .px, so the live site is untouched.
-   Palette: Rocket purple stays the anchor; lime, coral and cream are the complements. */
+   Palette: Rocket purple stays the anchor; silver, coral and cream are the complements. */
 .px {
   --px-ink: #1d0a33;
   --px-soft: #f4eaf9;
@@ -10,7 +10,7 @@
   --px-ink-2: #1e0a3f;
   --px-purple: #89288f;
   --px-purple-hi: #b14bd0;
-  --px-lime: #d8ff3e;
+  --px-lime: #c5c8d2;
   --px-coral: #ff6f59;
   --px-cream: #fff4e6;
   font-family: "Bricolage Grotesque Variable", "Anek Bangla", ui-sans-serif, system-ui, sans-serif;
@@ -52,3 +52,9 @@ html[lang="bn"] .px :where(h1, h2, h3, h4, .px-display) { letter-spacing: -0.01e
 @keyframes gd-pop { from { opacity: 0; transform: translateY(24px) scale(0.96); } to { opacity: 1; transform: none; } }
 .px .gd-pop { animation: gd-pop 0.7s var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)) both; }
 @media (prefers-reduced-motion: reduce) { .px .gd-pop { animation: none; } }
+
+/* Pop-out type: a solid extruded shadow in a second colour. Padding gives the letter mask room so it is not clipped. */
+.px .px-pop .px-word { padding: 0.06em 0.14em 0.18em 0.06em; margin: -0.06em -0.14em -0.18em -0.06em; }
+.px .px-pop-ink .px-char { text-shadow: 0.011em 0.011em 0 #1d0a33, 0.022em 0.022em 0 #1d0a33, 0.033em 0.033em 0 #1d0a33, 0.044em 0.044em 0 #1d0a33, 0.055em 0.055em 0 #1d0a33, 0.066em 0.066em 0 #1d0a33, 0.077em 0.077em 0 #1d0a33, 0.088em 0.088em 0 #1d0a33, 0.099em 0.099em 0 #1d0a33, 0.14em 0.16em 0.14em rgba(29,10,51,0.28); }
+.px .px-pop-deep .px-char { text-shadow: 0.011em 0.011em 0 #ff6f59, 0.022em 0.022em 0 #ff6f59, 0.033em 0.033em 0 #ff6f59, 0.044em 0.044em 0 #ff6f59, 0.055em 0.055em 0 #ff6f59, 0.066em 0.066em 0 #ff6f59, 0.077em 0.077em 0 #ff6f59, 0.088em 0.088em 0 #ff6f59, 0.099em 0.099em 0 #ff6f59, 0.14em 0.16em 0.16em rgba(20,4,30,0.5); }
+

@@ -47,7 +47,7 @@ export function PxProof() {
       <div className="hidden h-full min-[700px]:block">
         <div className="pa absolute inset-0 grid place-items-center text-center">
           <ShieldCheck aria-hidden strokeWidth={1} className="pa-icon pointer-events-none absolute left-1/2 top-1/2 h-[min(88vh,820px)] w-[min(88vh,820px)] -translate-x-1/2 -translate-y-1/2 text-[var(--px-purple)] opacity-[0.1]" />
-          <p className="text-[clamp(5rem,17vw,19rem)] text-[var(--px-purple)]">
+          <p className="px-pop px-pop-ink text-[clamp(5rem,17vw,19rem)] text-[var(--px-purple)]">
             <Split as="span" className={word} text={{ en: 'Most', bn: 'সবচেয়ে' }} />
             <Split as="span" className={word} text={{ en: 'secure', bn: 'নিরাপদ' }} />
           </p>
@@ -55,7 +55,7 @@ export function PxProof() {
 
         <div className="pb-layer absolute inset-0 overflow-hidden bg-[var(--px-purple)] text-white">
           <BadgePercent aria-hidden strokeWidth={1} className="pb-icon pointer-events-none absolute -right-[4%] top-1/2 h-[min(96vh,900px)] w-[min(96vh,900px)] -translate-y-1/2 text-white opacity-[0.12]" />
-          <p className="pb-w absolute inset-0 flex flex-col justify-center px-[6vw]">
+          <p className="pb-w px-pop px-pop-deep absolute inset-0 flex flex-col justify-center px-[6vw]">
             <span className="block self-start text-[clamp(2.4rem,6.4vw,7rem)]"><Split as="span" className={word} text={{ en: "Country's", bn: 'দেশের' }} /></span>
             <span className="pb-big block self-center text-[clamp(6rem,21vw,23rem)] text-white"><Split as="span" className={word} text={{ en: 'lowest', bn: 'সবচেয়ে কম' }} /></span>
             <span className="block self-end text-[clamp(2.2rem,8vw,8.6rem)]"><Split as="span" className={word} text={{ en: 'cash-out charge', bn: 'ক্যাশ আউট চার্জ' }} /></span>

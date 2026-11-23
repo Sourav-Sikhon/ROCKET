@@ -9,8 +9,8 @@ import { services } from '../data/services'
 
 // One colourway per card: [background, text, chip].
 const ways: [string, string, string][] = [
-  ['#89288f', '#ffffff', '#d8ff3e'],
-  ['#d8ff3e', '#1d0a33', '#89288f'],
+  ['#89288f', '#ffffff', '#c5c8d2'],
+  ['#c5c8d2', '#1d0a33', '#89288f'],
   ['#ff6f59', '#1d0a33', '#ffffff'],
   ['#2f7de1', '#ffffff', '#ffffff'],
   ['#ffb020', '#1d0a33', '#ffffff'],
@@ -60,7 +60,7 @@ export function PxStack() {
               <li key={s.slug} className="stk-card sticky mb-6 origin-top overflow-hidden rounded-[32px] md:mb-10" style={{ top: `${104 + i * 14}px`, background: bg, color: fg }}>
                 <div className="grid min-h-[min(520px,72svh)] items-center gap-6 p-7 md:grid-cols-[minmax(0,1.1fr)_minmax(0,0.9fr)] md:p-12">
                   <div className="stk-in relative z-[1]">
-                    <span className="grid h-16 w-16 place-items-center rounded-2xl" style={{ background: chip, color: chip === '#ffffff' || chip === '#d8ff3e' ? '#1d0a33' : '#fff' }}><Icon name={s.icon} size={30} /></span>
+                    <span className="grid h-16 w-16 place-items-center rounded-2xl" style={{ background: chip, color: chip === '#ffffff' || chip === '#c5c8d2' ? '#1d0a33' : '#fff' }}><Icon name={s.icon} size={30} /></span>
                     <h3 className="mt-8 text-[clamp(2.2rem,5vw,4.8rem)] font-extrabold leading-[0.98]">{t(s.name)}</h3>
                     <p className="mt-4 max-w-[30rem] text-[clamp(1.02rem,1.3vw,1.25rem)] font-medium leading-[1.5]" style={{ opacity: 0.9 }}>{t(s.short)}</p>
                     <Link to={`/services/${s.slug}`} className="group mt-8 inline-flex min-h-[48px] items-center gap-2 rounded-full px-6 text-[0.98rem] font-bold" style={{ background: fg, color: bg }}>
