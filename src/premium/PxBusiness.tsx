@@ -12,7 +12,7 @@ const kinds: { to: string; icon: IconName; name: L; line: L; bg: string; fg: str
   { to: '/services/merchant-payment', icon: 'shop', name: { en: 'Merchants', bn: 'মার্চেন্ট' }, line: { en: 'Accept payment from customers at your counter.', bn: 'কাউন্টারে গ্রাহকের পেমেন্ট গ্রহণ করুন।' }, bg: '#89288f', fg: '#ffffff', chip: '#ffffff' },
   { to: '/services/salary-disbursement', icon: 'salary', name: { en: 'Corporate & Government', bn: 'কর্পোরেট ও সরকারি' }, line: { en: 'Pay salaries and allowances straight into Rocket.', bn: 'বেতন ও ভাতা সরাসরি রকেটে পাঠান।' }, bg: '#ffffff', fg: '#1d0a33', chip: '#89288f' },
   { to: '/services/bill-payment', icon: 'bill', name: { en: 'Educational Institutions', bn: 'শিক্ষা প্রতিষ্ঠান' }, line: { en: 'Education is a Bill Pay category in the app.', bn: 'অ্যাপের বিল পে-তে শিক্ষা একটি ক্যাটাগরি।' }, bg: '#ffffff', fg: '#1d0a33', chip: '#89288f' },
-  { to: '/services/foreign-remittance', icon: 'globe', name: { en: 'Remittance Partners', bn: 'রেমিট্যান্স পার্টনার' }, line: { en: 'Money from abroad, credited via nominated exchange houses.', bn: 'মনোনীত এক্সচেঞ্জ হাউজের মাধ্যমে বিদেশ থেকে টাকা।' }, bg: 'var(--px-black)', fg: '#ffffff', chip: '#ffffff' },
+  { to: '/services/foreign-remittance', icon: 'globe', name: { en: 'Remittance Partners', bn: 'রেমিট্যান্স পার্টনার' }, line: { en: 'Money from abroad, credited via nominated exchange houses.', bn: 'মনোনীত এক্সচেঞ্জ হাউজের মাধ্যমে বিদেশ থেকে টাকা।' }, bg: 'var(--px-black)', fg: '#1d0a33', chip: '#89288f' },
 ]
 
 /** Rocket for Business, in the premium language: giant faded word, bold coloured cards, offset photo. */

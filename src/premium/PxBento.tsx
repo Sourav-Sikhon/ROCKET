@@ -102,12 +102,12 @@ export function PxBento() {
           </article>
 
           {/* Nearby */}
-          <article className={`${tile} col-span-2 bg-[var(--px-black)] p-7 text-white`}>
+          <article className={`${tile} col-span-2 bg-[var(--px-black)] p-7 text-[var(--px-ink)]`}>
             <Clip id="near" />
             <div className="bt-in flex h-full flex-col justify-between">
-              <div className="flex items-center gap-3"><MapPin size={30} aria-hidden className="text-[#ff8a8f]" /><h3 className="text-[clamp(1.8rem,3vw,2.8rem)] font-extrabold">{t({ en: 'Find it nearby.', bn: 'কাছেই খুঁজুন।' })}</h3></div>
+              <div className="flex items-center gap-3"><MapPin size={30} aria-hidden className="text-[var(--px-purple)]" /><h3 className="text-[clamp(1.8rem,3vw,2.8rem)] font-extrabold">{t({ en: 'Find it nearby.', bn: 'কাছেই খুঁজুন।' })}</h3></div>
               <ul className="flex flex-wrap gap-2.5">
-                {nearby.map((n, i) => <li key={i} className="rounded-full border border-white/25 px-4 py-2 text-[0.92rem] font-bold">{t(n)}</li>)}
+                {nearby.map((n, i) => <li key={i} className="rounded-full border border-[var(--px-ink)]/25 px-4 py-2 text-[0.92rem] font-bold">{t(n)}</li>)}
               </ul>
             </div>
           </article>

@@ -38,8 +38,8 @@ const features: { tint: string; fg: string; pane: string; t: L; d: L; media: Rea
   { tint: 'var(--px-silver)', fg: '#1d0a33', pane: 'rgba(255,255,255,0.5)', t: { en: 'Secure transfers', bn: 'নিরাপদ লেনদেন' }, d: { en: 'Needs your phone, PIN and check digit together.', bn: 'ফোন, পিন ও চেক ডিজিট একসাথে লাগে।' }, media: <Screen screen="login" /> },
   { tint: 'var(--px-blue-l)', fg: 'var(--px-blue-d)', pane: 'rgba(255,255,255,0.7)', t: { en: 'Agents nationwide', bn: 'সারা দেশে এজেন্ট' }, d: { en: 'Even in remote areas, with DBBL ATMs and branches behind them.', bn: 'দুর্গম এলাকাতেও, পেছনে আছে ডিবিবিএল এটিএম ও শাখা।' }, media: <Screen screen="store-locator" /> },
   { tint: 'var(--px-green)', fg: '#ffffff', pane: 'rgba(255,255,255,0.16)', t: { en: 'A habit of saving', bn: 'সঞ্চয়ের অভ্যাস' }, d: { en: 'A real bank account that helps you build one.', bn: 'আসল ব্যাংক অ্যাকাউন্ট, যা অভ্যাস গড়তে সাহায্য করে।' }, media: <Screen screen="add-money" /> },
-  { tint: 'var(--px-black)', fg: '#ffffff', pane: 'rgba(255,255,255,0.1)', t: { en: 'Works on any phone', bn: 'যেকোনো ফোনে চলে' }, d: { en: 'No smartphone? Dial *322# on any handset.', bn: 'স্মার্টফোন নেই? যেকোনো ফোনে *322# ডায়াল করুন।' }, media: <FeaturePhone /> },
-  { tint: 'var(--px-red-l)', fg: 'var(--px-red-d)', pane: 'rgba(255,255,255,0.7)', t: { en: 'Bangla and English', bn: 'বাংলা ও ইংরেজি' }, d: { en: 'The whole app speaks your language.', bn: 'পুরো অ্যাপ আপনার ভাষায়।' }, media: <Languages /> },
+  { tint: 'var(--px-black)', fg: '#1d0a33', pane: 'rgba(255,255,255,0.5)', t: { en: 'Works on any phone', bn: 'যেকোনো ফোনে চলে' }, d: { en: 'No smartphone? Dial *322# on any handset.', bn: 'স্মার্টফোন নেই? যেকোনো ফোনে *322# ডায়াল করুন।' }, media: <FeaturePhone /> },
+  { tint: 'var(--px-red)', fg: '#ffffff', pane: 'rgba(255,255,255,0.16)', t: { en: 'Bangla and English', bn: 'বাংলা ও ইংরেজি' }, d: { en: 'The whole app speaks your language.', bn: 'পুরো অ্যাপ আপনার ভাষায়।' }, media: <Languages /> },
 ]
 
 /** Features: each card opens with its picture, then the title and text. Cards rise in sequence and lift on hover. */

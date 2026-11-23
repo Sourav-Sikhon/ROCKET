@@ -14,7 +14,7 @@ const ways: [string, string, string][] = [
   ['var(--px-blue)', '#ffffff', '#ffffff'],
   ['var(--px-green)', '#ffffff', '#ffffff'],
   ['var(--px-red)', '#ffffff', '#ffffff'],
-  ['var(--px-black)', '#ffffff', 'var(--px-silver)'],
+  ['var(--px-black)', '#1d0a33', '#89288f'],
   ['var(--px-blue-l)', 'var(--px-blue-d)', 'var(--px-blue)'],
   ['var(--px-green-l)', 'var(--px-green-d)', 'var(--px-green)'],
 ]

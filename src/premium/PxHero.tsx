@@ -83,7 +83,7 @@ export function PxHero() {
 
       {/* Hand and phone, in front of the words */}
       <div className="relative z-[2] mx-auto -mt-[12vw] aspect-[4/3] w-[110%] max-w-[900px] -translate-x-[4%] lg:absolute lg:bottom-0 lg:left-1/2 lg:mx-0 lg:mt-0 lg:w-[76vw] lg:max-w-[1280px] lg:-translate-x-1/2">
-        <div className="hero-depth absolute inset-0">
+        <div className="hero-depth absolute inset-0 translate-y-[3.6%]">
           <img src="/hero/rocket-hand.webp" width={2000} height={1500} alt={t({ en: 'A hand holding a phone showing the Rocket app home screen', bn: 'রকেট অ্যাপের হোম স্ক্রিন দেখানো ফোন হাতে' })}
             className="hero-hand absolute inset-0 h-full w-full object-contain will-change-transform" {...{ fetchpriority: 'high' }} />
         </div>
