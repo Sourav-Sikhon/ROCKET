@@ -9,7 +9,7 @@ import type { AppScreen, L } from '../data/services'
 // Drop a hosted file here (for example '/media/send-money.mp4') and that tutorial plays the real video instead of the walkthrough.
 const VIDEOS: Record<string, string> = {}
 const MS = 3800
-const GRAY = '#e4e3e8' // the neutral stage behind every tutorial thumbnail and player
+const GRAY = 'linear-gradient(145deg, #f6f6f9 0%, #dcdde4 48%, #c3c6d1 100%)' // the neutral stage behind every tutorial thumbnail and player
 
 type Tutorial = { id: string; screen: AppScreen; c: [string, string, string]; title: L; detail: L; steps: L[]; to: string }
 
@@ -134,10 +134,10 @@ export function PxGuide() {
               <li key={x.id}>
                 <button type="button" onClick={() => setOpen(x)} className="group flex h-full w-full flex-col overflow-hidden rounded-[22px] bg-white text-left text-[var(--px-ink)] shadow-[0_24px_40px_-28px_rgba(29,10,51,0.7)] transition-[transform,box-shadow] duration-500 ease-[var(--ease-out-expo)] hover:-translate-y-2 hover:shadow-[0_34px_50px_-26px_rgba(29,10,51,0.8)]">
                   {/* Thumbnail */}
-                  <span className="relative block aspect-video overflow-hidden" style={{ background: bg, color: fg }}>
+                  <span className="relative block aspect-[4/3] overflow-hidden" style={{ background: bg, color: fg }}>
                     <span aria-hidden className="absolute inset-0" style={{ backgroundImage: `radial-gradient(${fg}2e 1.4px, transparent 1.5px)`, backgroundSize: '22px 22px' }} />
                     <span aria-hidden className="px-display absolute -bottom-[16%] left-[4%] select-none text-[6.5rem] font-extrabold leading-none" style={{ color: `${fg}26` }}>{i + 1}</span>
-                    <span aria-hidden className="absolute -bottom-[34%] right-[10%] w-[34%] transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:-translate-y-3"><Phone screen={x.screen} className="w-full" /></span>
+                    <span aria-hidden className="absolute -bottom-[26%] right-[10%] w-[38%] transition-transform duration-700 ease-[var(--ease-out-expo)] group-hover:-translate-y-3"><Phone light screen={x.screen} className="w-full" /></span>
                     <span className="absolute left-4 top-1/2 grid h-14 w-14 -translate-y-1/2 place-items-center rounded-full bg-white text-[var(--px-purple)] shadow-[0_14px_26px_-10px_rgba(29,10,51,0.6)] transition-transform duration-500 ease-[var(--ease-out-expo)] group-hover:scale-110">
                       <Play size={22} aria-hidden fill="currentColor" className="translate-x-px" />
                     </span>
