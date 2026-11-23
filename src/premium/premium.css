@@ -11,6 +11,7 @@
   --px-purple: #89288f;
   --px-purple-hi: #b14bd0;
   --px-lime: #c5c8d2;
+  --px-silver: radial-gradient(38% 60% at 80% 66%, rgba(255,255,255,0.5), transparent 72%), linear-gradient(115deg, #cfd1d8 0%, #e6e7eb 20%, #ffffff 32%, #e3e4e9 41%, #c8cad1 56%, #a8aab2 78%, #b6b8bf 100%);
   --px-coral: #ff6f59;
   --px-cream: #fff4e6;
   font-family: "Bricolage Grotesque Variable", "Anek Bangla", ui-sans-serif, system-ui, sans-serif;

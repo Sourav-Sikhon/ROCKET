@@ -9,13 +9,13 @@ import type { AppScreen, L } from '../data/services'
 // Drop a hosted file here (for example '/media/send-money.mp4') and that tutorial plays the real video instead of the walkthrough.
 const VIDEOS: Record<string, string> = {}
 const MS = 3800
-const GRAY = 'linear-gradient(145deg, #f6f6f9 0%, #dcdde4 48%, #c3c6d1 100%)' // the neutral stage behind every tutorial thumbnail and player
+const GRAY = 'var(--px-silver)' // the neutral stage behind every tutorial thumbnail and player
 
 type Tutorial = { id: string; screen: AppScreen; c: [string, string, string]; title: L; detail: L; steps: L[]; to: string }
 
 // The official account-opening steps, as the Rocket pages describe them.
 const openAccount: Tutorial = {
-  id: 'open-account', screen: 'login', c: ['#c5c8d2', '#1d0a33', '#89288f'], to: '/open-account',
+  id: 'open-account', screen: 'login', c: ['var(--px-silver)', '#1d0a33', '#89288f'], to: '/open-account',
   title: { en: 'Open an account', bn: 'অ্যাকাউন্ট খুলুন' },
   detail: { en: 'Take your KYC form, a photograph and your National ID to a Rocket agent.', bn: 'কেওয়াইসি ফর্ম, একটি ছবি ও জাতীয় পরিচয়পত্র নিয়ে রকেট এজেন্টের কাছে যান।' },
   steps: [
@@ -28,7 +28,7 @@ const openAccount: Tutorial = {
 
 // Seven more, one per everyday task. Titles, descriptions and steps all come from the service pages.
 const palettes: [string, string, string][] = [
-  ['#89288f', '#ffffff', '#c5c8d2'], ['#ff6f59', '#1d0a33', '#ffffff'], ['#2f7de1', '#ffffff', '#ffffff'], ['#ffb020', '#1d0a33', '#ffffff'],
+  ['#89288f', '#ffffff', 'var(--px-silver)'], ['#ff6f59', '#1d0a33', '#ffffff'], ['#2f7de1', '#ffffff', '#ffffff'], ['#ffb020', '#1d0a33', '#ffffff'],
   ['#8fe3c0', '#1d0a33', '#ffffff'], ['#ffc2e2', '#1d0a33', '#89288f'], ['#e9d8f2', '#1d0a33', '#89288f'],
 ]
 const slugs = ['cash-in', 'cash-out', 'send-money', 'mobile-top-up', 'bill-payment', 'merchant-payment', 'bank-transfer']
