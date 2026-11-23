@@ -9,7 +9,7 @@ import type { AppScreen, L } from '../data/services'
 // Drop a hosted file here (for example '/media/send-money.mp4') and that tutorial plays the real video instead of the walkthrough.
 const VIDEOS: Record<string, string> = {}
 const MS = 3800
-const GRAY = 'var(--px-silver)' // the neutral stage behind every tutorial thumbnail and player
+const GRAY = '#e6e6ec' // the neutral stage behind every tutorial thumbnail and player
 
 type Tutorial = { id: string; screen: AppScreen; c: [string, string, string]; title: L; detail: L; steps: L[]; to: string }
 
