@@ -1,0 +1,54 @@
+@import "@fontsource-variable/bricolage-grotesque/index.css";
+
+/* Premium redesign scope. Everything below only applies inside .px, so the live site is untouched.
+   Palette: Rocket purple stays the anchor; lime, coral and cream are the complements. */
+.px {
+  --px-ink: #1d0a33;
+  --px-soft: #f4eaf9;
+  --px-soft-2: #e9d8f2;
+  --px-line: #e2cfee;
+  --px-ink-2: #1e0a3f;
+  --px-purple: #89288f;
+  --px-purple-hi: #b14bd0;
+  --px-lime: #d8ff3e;
+  --px-coral: #ff6f59;
+  --px-cream: #fff4e6;
+  font-family: "Bricolage Grotesque Variable", "Anek Bangla", ui-sans-serif, system-ui, sans-serif;
+  font-optical-sizing: auto;
+}
+.px :where(h1, h2, h3, h4, .px-display) {
+  font-family: "Bricolage Grotesque Variable", "Anek Bangla", ui-sans-serif, system-ui, sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.92;
+  text-wrap: balance;
+}
+html[lang="bn"] .px :where(h1, h2, h3, h4, .px-display) { letter-spacing: -0.01em; line-height: 1.12; font-weight: 700; }
+
+/* Split text */
+.px-word { display: inline-block; overflow: hidden; vertical-align: top; padding-bottom: 0.08em; margin-bottom: -0.08em; }
+.px-char { display: inline-block; will-change: transform; }
+
+/* Marquee */
+@keyframes px-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+.px-marquee-track { display: flex; width: max-content; animation: px-marquee 32s linear infinite; }
+.px-marquee-track.rev { animation-direction: reverse; }
+
+/* Floating glass chips */
+@keyframes px-bob { 0%, 100% { transform: translateY(0) rotate(var(--r, 0deg)); } 50% { transform: translateY(-10px) rotate(var(--r, 0deg)); } }
+.px-bob { animation: px-bob 5.5s ease-in-out infinite; }
+
+/* Skyline window blink */
+@keyframes px-win { 0%, 100% { opacity: 0.25; } 50% { opacity: 0.9; } }
+
+.px ::selection { background: var(--px-lime); color: var(--px-ink); }
+
+@media (prefers-reduced-motion: reduce) {
+  .px-marquee-track, .px-bob { animation: none; }
+}
+
+/* Tutorial walkthrough */
+@keyframes gd-fill { from { transform: scaleX(0.04); } to { transform: scaleX(1); } }
+@keyframes gd-pop { from { opacity: 0; transform: translateY(24px) scale(0.96); } to { opacity: 1; transform: none; } }
+.px .gd-pop { animation: gd-pop 0.7s var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)) both; }
+@media (prefers-reduced-motion: reduce) { .px .gd-pop { animation: none; } }
