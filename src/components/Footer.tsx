@@ -2,7 +2,6 @@
 import { Facebook, Linkedin, Mail, Phone, Youtube } from 'lucide-react'
 import { links, SHOW_CONTENT_FLAGS } from '../data/site'
 import { ui, useI18n } from '../i18n'
-import { ContourLines, ShaheedMinar, SangsadLine } from './art'
 
 /** Deep-violet footer, laid out as in the approved reference. */
 export function Footer() {
@@ -13,12 +12,9 @@ export function Footer() {
   return (
     <footer className="on-dark relative overflow-hidden text-white">
       <div className="relative bg-[linear-gradient(180deg,var(--color-foot-1),var(--color-foot-2))]">
-        {/* Line-art landmarks at 10%: Jatiya Sangsad Bhaban and the Shaheed Minar over soft river contours */}
-        <div aria-hidden className="pointer-events-none absolute inset-x-0 bottom-0 h-[260px] overflow-hidden text-white/10">
-          <ContourLines className="absolute inset-x-0 bottom-0 h-[110px] w-full" />
-          <SangsadLine className="absolute bottom-6 left-[3%] hidden h-[220px] w-auto min-[900px]:block" />
-          <ShaheedMinar tone="line" className="absolute bottom-6 right-[4%] hidden h-[210px] w-auto min-[900px]:block" />
-          <SangsadLine className="absolute -bottom-2 left-1/2 h-[130px] w-auto -translate-x-1/2 min-[900px]:hidden" />
+        {/* Dhaka skyline line art, inverted to white lines and kept faint */}
+        <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+          <img alt="" src="/hero/skyline.webp" width={2000} height={500} loading="lazy" className="absolute inset-x-0 bottom-0 h-auto w-full translate-y-[20.5%] select-none opacity-[0.08] mix-blend-screen invert" />
         </div>
         <div className="wrap relative grid gap-12 pb-12 pt-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
