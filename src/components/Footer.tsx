@@ -16,8 +16,8 @@ export function Footer() {
         <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
           <img alt="" src="/hero/skyline.webp" width={2000} height={500} loading="lazy" className="absolute inset-x-0 bottom-0 h-auto w-full translate-y-[20.5%] select-none opacity-[0.08] mix-blend-screen invert" />
         </div>
-        <div className="wrap relative grid gap-12 pb-12 pt-12 lg:grid-cols-12">
-          <div className="lg:col-span-4">
+        <div className="wrap relative grid grid-cols-2 gap-x-6 gap-y-10 pb-12 pt-12 lg:grid-cols-12 lg:gap-12">
+          <div className="col-span-2 lg:col-span-4">
             <img src="/hero/logo-white.png" width={576} height={363} alt="Rocket, Dutch-Bangla Bank Mobile Banking" className="h-[92px] w-auto" />
             <p className="mt-5 text-[0.95rem] text-white/90">{t({ en: 'Dutch-Bangla Bank Mobile Banking.', bn: 'ডাচ্-বাংলা ব্যাংক মোবাইল ব্যাংকিং।' })}</p>
             <div className="mt-6 flex items-center gap-3">
@@ -48,7 +48,7 @@ export function Footer() {
             </ul>
           </nav>
 
-          <div className="lg:col-span-3">
+          <div className="col-span-2 lg:col-span-3">
             <p className={head}>{t({ en: 'Contact Us', bn: 'যোগাযোগ করুন' })}</p>
             <ul className="space-y-3.5 text-[0.95rem] text-white/90">
               <li className="flex items-center gap-3"><Phone size={17} aria-hidden /><a className="tabular hover:text-white" href="tel:16216">16216</a></li>
