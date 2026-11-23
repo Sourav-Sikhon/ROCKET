@@ -1,12 +1,11 @@
 ﻿import { StrictMode, useEffect } from 'react'
 import { createRoot } from 'react-dom/client'
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import './index.css'
 import { I18nProvider } from './i18n'
 import { startSmoothScroll } from './motion'
 import { Header } from './components/Header'
 import { Footer } from './components/Footer'
-import Home from './pages/Home'
 import Premium from './pages/Premium'
 import { ServicesIndex, ServiceDetail } from './pages/Services'
 import { OpenAccountPage, BenefitsPage, FindUsPage, SecurityPage, NoticesPage, HelpPage, AboutPage } from './pages/Pages'
@@ -31,8 +30,8 @@ function App() {
         <Header />
         <main id="main" tabIndex={-1} className="outline-none">
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/premium" element={<Premium />} />
+            <Route path="/" element={<Premium />} />
+            <Route path="/premium" element={<Navigate to="/" replace />} />
             <Route path="/services" element={<ServicesIndex />} />
             <Route path="/services/:slug" element={<ServiceDetail />} />
             <Route path="/open-account" element={<OpenAccountPage />} />
