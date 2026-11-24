@@ -1,4 +1,3 @@
-@import "@fontsource-variable/bricolage-grotesque/index.css";
 
 /* Premium redesign scope. Everything below only applies inside .px, so the live site is untouched.
    Palette: Rocket purple stays the anchor; silver, coral and cream are the complements. */
@@ -19,11 +18,11 @@
   --px-black: #fe9acc; --px-black-2: #f27db6;
   --px-coral: #d11a22;
   --px-cream: #fff4e6;
-  font-family: "Bricolage Grotesque Variable", "Anek Bangla", ui-sans-serif, system-ui, sans-serif;
+  font-family: "Stack Sans Headline Variable", "Anek Bangla", ui-sans-serif, system-ui, sans-serif;
   font-optical-sizing: auto;
 }
 .px :where(h1, h2, h3, h4, .px-display) {
-  font-family: "Bricolage Grotesque Variable", "Anek Bangla", ui-sans-serif, system-ui, sans-serif;
+  font-family: "Sora Variable", "Anek Bangla", ui-sans-serif, system-ui, sans-serif;
   font-weight: 800;
   letter-spacing: -0.045em;
   line-height: 0.92;

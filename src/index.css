@@ -1,8 +1,6 @@
 ﻿@import "tailwindcss";
-@import "@fontsource/manrope/500.css";
-@import "@fontsource/manrope/600.css";
-@import "@fontsource/manrope/700.css";
-@import "@fontsource/manrope/800.css";
+@import "@fontsource-variable/sora/index.css";
+@import "@fontsource-variable/stack-sans-headline/index.css";
 @import "@fontsource/anek-bangla/400.css";
 @import "@fontsource/anek-bangla/500.css";
 @import "@fontsource/anek-bangla/600.css";
@@ -44,9 +42,9 @@
   --color-alert-bg: #fdecea;
   --color-info: #1d5fa8;
 
-  --font-sans: "Manrope", "Anek Bangla", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Manrope", "Anek Bangla", ui-sans-serif, system-ui, sans-serif;
-  --font-bn: "Anek Bangla", "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Stack Sans Headline Variable", "Anek Bangla", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Sora Variable", "Anek Bangla", ui-sans-serif, system-ui, sans-serif;
+  --font-bn: "Anek Bangla", "Stack Sans Headline Variable", ui-sans-serif, system-ui, sans-serif;
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -76,7 +74,7 @@
   html[lang="bn"] .font-extrabold { font-weight: 700; }
   html[lang="bn"] h1, html[lang="bn"] h2, html[lang="bn"] h3 { word-spacing: 0.1em; letter-spacing: 0 !important; }
 
-  /* Titles and subtitles use Manrope; Bangla glyphs fall through to Anek Bangla. */
+  /* Headings use Sora and body text uses Stack Sans Headline; Bangla glyphs fall through to Anek Bangla. */
   h1, h2, h3, h4, .display, .big, .h1, .h2, .h3, .h4, .sect-title, .sect-intro, .lead, .eyebrow, .font-display { font-family: var(--font-display); }
   h1, h2, .display, .big, .h1, .h2, .sect-title { font-weight: 800; }
   h3, h4, .h3, .h4 { font-weight: 700; }

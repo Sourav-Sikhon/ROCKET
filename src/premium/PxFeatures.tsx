@@ -29,12 +29,12 @@ function FeaturePhone() {
       {/* Screen */}
       <rect x="25" y="22" width="70" height="62" rx="6" fill="#0a0f0d" />
       <rect x="28" y="25" width="64" height="56" rx="3.5" fill="url(#fp-screen)" />
-      <text x="34" y="37" fontSize="6" fontWeight="700" fill="#2b4a2b" fontFamily="Bricolage Grotesque Variable, sans-serif">Rocket</text>
-      <text x="60" y="57" textAnchor="middle" fontSize="15" fontWeight="800" fill="#1f3a22" fontFamily="Bricolage Grotesque Variable, sans-serif">*322#</text>
-      <text x="60" y="70" textAnchor="middle" fontSize="5.5" fontWeight="600" fill="#2b4a2b" fontFamily="Bricolage Grotesque Variable, sans-serif">Dutch-Bangla Bank</text>
+      <text x="34" y="37" fontSize="6" fontWeight="700" fill="#2b4a2b" fontFamily="Stack Sans Headline Variable, sans-serif">Rocket</text>
+      <text x="60" y="57" textAnchor="middle" fontSize="15" fontWeight="800" fill="#1f3a22" fontFamily="Stack Sans Headline Variable, sans-serif">*322#</text>
+      <text x="60" y="70" textAnchor="middle" fontSize="5.5" fontWeight="600" fill="#2b4a2b" fontFamily="Stack Sans Headline Variable, sans-serif">Dutch-Bangla Bank</text>
       <rect x="28" y="73" width="64" height="8" fill="#2b4a2b" opacity="0.14" />
-      <text x="32" y="79" fontSize="5" fontWeight="700" fill="#1f3a22" fontFamily="Bricolage Grotesque Variable, sans-serif">Options</text>
-      <text x="88" y="79" textAnchor="end" fontSize="5" fontWeight="700" fill="#1f3a22" fontFamily="Bricolage Grotesque Variable, sans-serif">Back</text>
+      <text x="32" y="79" fontSize="5" fontWeight="700" fill="#1f3a22" fontFamily="Stack Sans Headline Variable, sans-serif">Options</text>
+      <text x="88" y="79" textAnchor="end" fontSize="5" fontWeight="700" fill="#1f3a22" fontFamily="Stack Sans Headline Variable, sans-serif">Back</text>
       {/* Navigation: soft keys and a round d-pad */}
       <rect x="25" y="90" width="22" height="9" rx="4.5" fill="url(#fp-key)" />
       <rect x="73" y="90" width="22" height="9" rx="4.5" fill="url(#fp-key)" />
@@ -49,7 +49,7 @@ function FeaturePhone() {
           <g key={k}>
             <rect x={x} y={y} width="20" height="17" rx="6" fill="url(#fp-key)" />
             <rect x={x + 0.5} y={y + 0.5} width="19" height="16" rx="5.5" fill="none" stroke="#ffffff" strokeOpacity="0.12" />
-            <text x={x + 10} y={y + 12} textAnchor="middle" fontSize="9" fontWeight="700" fill="#e8efe9" fontFamily="Bricolage Grotesque Variable, sans-serif">{k}</text>
+            <text x={x + 10} y={y + 12} textAnchor="middle" fontSize="9" fontWeight="700" fill="#e8efe9" fontFamily="Stack Sans Headline Variable, sans-serif">{k}</text>
           </g>
         )
       })}

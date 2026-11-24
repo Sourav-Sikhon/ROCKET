@@ -41,7 +41,7 @@ export function PxHero() {
     return () => ctx.revert()
   }, [])
 
-  const word = 'block text-[clamp(4.4rem,14vw,14rem)] font-extrabold uppercase leading-[0.84] tracking-[-0.05em]'
+  const word = 'block text-[clamp(4rem,12.4vw,13rem)] font-extrabold uppercase leading-[0.84] tracking-[-0.05em]'
   const chip = 'hero-chip px-bob grid h-[68px] w-[68px] place-items-center rounded-full border border-white/40 bg-white/20 text-white shadow-[0_18px_30px_-16px_rgba(29,10,51,0.55)]'
   return (
     <section ref={root} aria-labelledby="px-hero-h" className="relative isolate overflow-hidden bg-[radial-gradient(120%_70%_at_65%_100%,#c987d0_0%,#a653ad_38%,#89288f_62%,#6a1d71_100%)] text-white lg:min-h-[max(780px,100svh)]">
